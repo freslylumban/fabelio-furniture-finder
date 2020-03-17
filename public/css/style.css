@@ -169,3 +169,23 @@ p {
 .product-details-box .prod-details-price .prod-details-price-product {
   font-size: 20px;
 }
+.fabelio-notfoundpage {
+  background: #0F6CC8;
+  text-align: center;
+  height: 100vh;
+}
+.fabelio-notfoundpage .notfound-image {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.spinner-loading-gif {
+  display: flex;
+  width: 100%;
+  height: 80vh;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  z-index: 100000000;
+  background: #FFFFFF;
+}
