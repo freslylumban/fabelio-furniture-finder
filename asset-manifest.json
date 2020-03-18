@@ -1,24 +1,24 @@
 {
   "files": {
     "main.css": "/fabelio-furniture-finder/static/css/main.2f407569.chunk.css",
-    "main.js": "/fabelio-furniture-finder/static/js/main.d849d52a.chunk.js",
-    "main.js.map": "/fabelio-furniture-finder/static/js/main.d849d52a.chunk.js.map",
+    "main.js": "/fabelio-furniture-finder/static/js/main.9f195611.chunk.js",
+    "main.js.map": "/fabelio-furniture-finder/static/js/main.9f195611.chunk.js.map",
     "runtime-main.js": "/fabelio-furniture-finder/static/js/runtime-main.e6fc0344.js",
     "runtime-main.js.map": "/fabelio-furniture-finder/static/js/runtime-main.e6fc0344.js.map",
-    "static/js/2.fdf2e3da.chunk.js": "/fabelio-furniture-finder/static/js/2.fdf2e3da.chunk.js",
-    "static/js/2.fdf2e3da.chunk.js.map": "/fabelio-furniture-finder/static/js/2.fdf2e3da.chunk.js.map",
+    "static/js/2.938198c0.chunk.js": "/fabelio-furniture-finder/static/js/2.938198c0.chunk.js",
+    "static/js/2.938198c0.chunk.js.map": "/fabelio-furniture-finder/static/js/2.938198c0.chunk.js.map",
     "index.html": "/fabelio-furniture-finder/index.html",
-    "precache-manifest.9f10440559fdf4d39126a76617991a11.js": "/fabelio-furniture-finder/precache-manifest.9f10440559fdf4d39126a76617991a11.js",
+    "precache-manifest.c3f7bd3570c6e203ef2f3320aeae9def.js": "/fabelio-furniture-finder/precache-manifest.c3f7bd3570c6e203ef2f3320aeae9def.js",
     "service-worker.js": "/fabelio-furniture-finder/service-worker.js",
     "static/css/main.2f407569.chunk.css.map": "/fabelio-furniture-finder/static/css/main.2f407569.chunk.css.map",
-    "static/js/2.fdf2e3da.chunk.js.LICENSE.txt": "/fabelio-furniture-finder/static/js/2.fdf2e3da.chunk.js.LICENSE.txt",
+    "static/js/2.938198c0.chunk.js.LICENSE.txt": "/fabelio-furniture-finder/static/js/2.938198c0.chunk.js.LICENSE.txt",
     "static/media/404notfound.png": "/fabelio-furniture-finder/static/media/404notfound.ce47c044.png",
     "static/media/spinner-loading.gif": "/fabelio-furniture-finder/static/media/spinner-loading.514519d9.gif"
   },
   "entrypoints": [
     "static/js/runtime-main.e6fc0344.js",
-    "static/js/2.fdf2e3da.chunk.js",
+    "static/js/2.938198c0.chunk.js",
     "static/css/main.2f407569.chunk.css",
-    "static/js/main.d849d52a.chunk.js"
+    "static/js/main.9f195611.chunk.js"
   ]
 }
