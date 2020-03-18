@@ -1,10 +1,10 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "aa9bb1547a3e640ce34e1b08a429287e",
+    "revision": "6894f9b777afd9a849d0093d45430d1c",
     "url": "/fabelio-furniture-finder/index.html"
   },
   {
-    "revision": "29e5f1d2a4b2aa0a135c",
+    "revision": "c78584e7fc082f671991",
     "url": "/fabelio-furniture-finder/static/css/main.2f407569.chunk.css"
   },
   {
@@ -16,8 +16,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/fabelio-furniture-finder/static/js/2.938198c0.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "29e5f1d2a4b2aa0a135c",
-    "url": "/fabelio-furniture-finder/static/js/main.9f195611.chunk.js"
+    "revision": "c78584e7fc082f671991",
+    "url": "/fabelio-furniture-finder/static/js/main.8a417afa.chunk.js"
   },
   {
     "revision": "53e02752a0d6b6f013b9",

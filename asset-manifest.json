@@ -1,14 +1,14 @@
 {
   "files": {
     "main.css": "/fabelio-furniture-finder/static/css/main.2f407569.chunk.css",
-    "main.js": "/fabelio-furniture-finder/static/js/main.9f195611.chunk.js",
-    "main.js.map": "/fabelio-furniture-finder/static/js/main.9f195611.chunk.js.map",
+    "main.js": "/fabelio-furniture-finder/static/js/main.8a417afa.chunk.js",
+    "main.js.map": "/fabelio-furniture-finder/static/js/main.8a417afa.chunk.js.map",
     "runtime-main.js": "/fabelio-furniture-finder/static/js/runtime-main.e6fc0344.js",
     "runtime-main.js.map": "/fabelio-furniture-finder/static/js/runtime-main.e6fc0344.js.map",
     "static/js/2.938198c0.chunk.js": "/fabelio-furniture-finder/static/js/2.938198c0.chunk.js",
     "static/js/2.938198c0.chunk.js.map": "/fabelio-furniture-finder/static/js/2.938198c0.chunk.js.map",
     "index.html": "/fabelio-furniture-finder/index.html",
-    "precache-manifest.c3f7bd3570c6e203ef2f3320aeae9def.js": "/fabelio-furniture-finder/precache-manifest.c3f7bd3570c6e203ef2f3320aeae9def.js",
+    "precache-manifest.f6441decb00ad7e9053dfbcdd4f2646c.js": "/fabelio-furniture-finder/precache-manifest.f6441decb00ad7e9053dfbcdd4f2646c.js",
     "service-worker.js": "/fabelio-furniture-finder/service-worker.js",
     "static/css/main.2f407569.chunk.css.map": "/fabelio-furniture-finder/static/css/main.2f407569.chunk.css.map",
     "static/js/2.938198c0.chunk.js.LICENSE.txt": "/fabelio-furniture-finder/static/js/2.938198c0.chunk.js.LICENSE.txt",
@@ -19,6 +19,6 @@
     "static/js/runtime-main.e6fc0344.js",
     "static/js/2.938198c0.chunk.js",
     "static/css/main.2f407569.chunk.css",
-    "static/js/main.9f195611.chunk.js"
+    "static/js/main.8a417afa.chunk.js"
   ]
 }
