@@ -1,5 +1,6 @@
 body {
   font-family: 'Maven Pro', sans-serif;
+  // overflow-y: hidden;
 }
 
 h1, h2, h3, h4, h5, h6, p {
@@ -26,6 +27,8 @@ h1, h2, h3, h4, h5, h6, p {
 }
 
 .form-group {
+  display: flex;
+  position: relative;
   input {
     &.search-box {
       background: transparent;
@@ -42,6 +45,14 @@ h1, h2, h3, h4, h5, h6, p {
         box-shadow: unset;
       }
     }
+  }
+  .search-button {
+    position: absolute;
+    top: 25%;
+    right: 5px;
+    background: transparent;
+    border: none;
+    color: white;
   }
 }
 

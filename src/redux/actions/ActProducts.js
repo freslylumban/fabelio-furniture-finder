@@ -1,5 +1,5 @@
 import axios from 'axios';
-import { PRODUCT_SHOW_ALL } from './../types/TypesProducts';
+import { PRODUCT_SHOW_ALL, PRODUCT_SHOW_FAILED } from './../types/TypesProducts';
 
 export const getAllProducts = () => async dispatch => {
   try {
@@ -13,6 +13,10 @@ export const getAllProducts = () => async dispatch => {
     });
   }
   catch (error) {
-    
+    console.log('ERROR', error)
+    dispatch({
+      type: PRODUCT_SHOW_FAILED,
+      payload: error
+    });
   }
 }

@@ -22,6 +22,10 @@ p {
   text-decoration: none;
   color: unset;
 }
+.form-group {
+  display: flex;
+  position: relative;
+}
 .form-group input.search-box {
   background: transparent;
   border: 1px solid transparent;
@@ -36,6 +40,14 @@ p {
   border-bottom: 3px solid #FFFFFF;
   color: #FFFFFF;
   box-shadow: unset;
+}
+.form-group .search-button {
+  position: absolute;
+  top: 25%;
+  right: 5px;
+  background: transparent;
+  border: none;
+  color: white;
 }
 .dropdown-style .dropdown-toggle {
   width: 100%;

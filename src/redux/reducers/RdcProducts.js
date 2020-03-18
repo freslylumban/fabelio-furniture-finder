@@ -1,10 +1,10 @@
-import { PRODUCT_SHOW_ALL } from '../types/TypesProducts';
+import { PRODUCT_SHOW_ALL, PRODUCT_SHOW_FAILED } from '../types/TypesProducts';
 
 const initialState = {
   allProducts: [],
   allFurnitureStyles: [],
   detailProduct: {},
-  error: null
+  error: false
 }
 
 export default function(state = initialState, action) {
@@ -17,6 +17,11 @@ export default function(state = initialState, action) {
         ...payload,
         allProducts: payload.products,
         allFurnitureStyles: payload.furniture_styles
+      }
+    case PRODUCT_SHOW_FAILED:
+      return {
+        ...state,
+        error: true
       }
     default:
       return state;
