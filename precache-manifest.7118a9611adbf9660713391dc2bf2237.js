@@ -1,23 +1,23 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "6894f9b777afd9a849d0093d45430d1c",
+    "revision": "6e9e07420ec51093c1708d16b7a2e699",
     "url": "/fabelio-furniture-finder/index.html"
   },
   {
-    "revision": "c78584e7fc082f671991",
+    "revision": "179c722c23bf4946aacf",
     "url": "/fabelio-furniture-finder/static/css/main.2f407569.chunk.css"
   },
   {
-    "revision": "758ae4e60b792ab228bb",
-    "url": "/fabelio-furniture-finder/static/js/2.938198c0.chunk.js"
+    "revision": "972b84cd87d5dd271dd7",
+    "url": "/fabelio-furniture-finder/static/js/2.78952439.chunk.js"
   },
   {
     "revision": "f231859d6585c4cd5f80c344783ed269",
-    "url": "/fabelio-furniture-finder/static/js/2.938198c0.chunk.js.LICENSE.txt"
+    "url": "/fabelio-furniture-finder/static/js/2.78952439.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "c78584e7fc082f671991",
-    "url": "/fabelio-furniture-finder/static/js/main.8a417afa.chunk.js"
+    "revision": "179c722c23bf4946aacf",
+    "url": "/fabelio-furniture-finder/static/js/main.769e98bc.chunk.js"
   },
   {
     "revision": "53e02752a0d6b6f013b9",
@@ -28,7 +28,7 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/fabelio-furniture-finder/static/media/404notfound.ce47c044.png"
   },
   {
-    "revision": "514519d9f5cc6bf71324dee669706fb8",
-    "url": "/fabelio-furniture-finder/static/media/spinner-loading.514519d9.gif"
+    "revision": "59ea11998dda153ef19b51caa5913376",
+    "url": "/fabelio-furniture-finder/static/media/spinner-loading.59ea1199.gif"
   }
 ]);

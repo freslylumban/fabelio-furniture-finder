@@ -1,24 +1,24 @@
 {
   "files": {
     "main.css": "/fabelio-furniture-finder/static/css/main.2f407569.chunk.css",
-    "main.js": "/fabelio-furniture-finder/static/js/main.8a417afa.chunk.js",
-    "main.js.map": "/fabelio-furniture-finder/static/js/main.8a417afa.chunk.js.map",
+    "main.js": "/fabelio-furniture-finder/static/js/main.769e98bc.chunk.js",
+    "main.js.map": "/fabelio-furniture-finder/static/js/main.769e98bc.chunk.js.map",
     "runtime-main.js": "/fabelio-furniture-finder/static/js/runtime-main.e6fc0344.js",
     "runtime-main.js.map": "/fabelio-furniture-finder/static/js/runtime-main.e6fc0344.js.map",
-    "static/js/2.938198c0.chunk.js": "/fabelio-furniture-finder/static/js/2.938198c0.chunk.js",
-    "static/js/2.938198c0.chunk.js.map": "/fabelio-furniture-finder/static/js/2.938198c0.chunk.js.map",
+    "static/js/2.78952439.chunk.js": "/fabelio-furniture-finder/static/js/2.78952439.chunk.js",
+    "static/js/2.78952439.chunk.js.map": "/fabelio-furniture-finder/static/js/2.78952439.chunk.js.map",
     "index.html": "/fabelio-furniture-finder/index.html",
-    "precache-manifest.f6441decb00ad7e9053dfbcdd4f2646c.js": "/fabelio-furniture-finder/precache-manifest.f6441decb00ad7e9053dfbcdd4f2646c.js",
+    "precache-manifest.7118a9611adbf9660713391dc2bf2237.js": "/fabelio-furniture-finder/precache-manifest.7118a9611adbf9660713391dc2bf2237.js",
     "service-worker.js": "/fabelio-furniture-finder/service-worker.js",
     "static/css/main.2f407569.chunk.css.map": "/fabelio-furniture-finder/static/css/main.2f407569.chunk.css.map",
-    "static/js/2.938198c0.chunk.js.LICENSE.txt": "/fabelio-furniture-finder/static/js/2.938198c0.chunk.js.LICENSE.txt",
+    "static/js/2.78952439.chunk.js.LICENSE.txt": "/fabelio-furniture-finder/static/js/2.78952439.chunk.js.LICENSE.txt",
     "static/media/404notfound.png": "/fabelio-furniture-finder/static/media/404notfound.ce47c044.png",
-    "static/media/spinner-loading.gif": "/fabelio-furniture-finder/static/media/spinner-loading.514519d9.gif"
+    "static/media/spinner-loading.gif": "/fabelio-furniture-finder/static/media/spinner-loading.59ea1199.gif"
   },
   "entrypoints": [
     "static/js/runtime-main.e6fc0344.js",
-    "static/js/2.938198c0.chunk.js",
+    "static/js/2.78952439.chunk.js",
     "static/css/main.2f407569.chunk.css",
-    "static/js/main.8a417afa.chunk.js"
+    "static/js/main.769e98bc.chunk.js"
   ]
 }

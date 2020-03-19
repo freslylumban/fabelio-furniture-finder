@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/4.3.1/workbox-sw.js");
 
 importScripts(
-  "/fabelio-furniture-finder/precache-manifest.f6441decb00ad7e9053dfbcdd4f2646c.js"
+  "/fabelio-furniture-finder/precache-manifest.7118a9611adbf9660713391dc2bf2237.js"
 );
 
 self.addEventListener('message', (event) => {
