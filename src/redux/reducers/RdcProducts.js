@@ -4,7 +4,8 @@ const initialState = {
   allProducts: [],
   allFurnitureStyles: [],
   detailProduct: {},
-  error: false
+  errorMsg: [],
+  errorBool: false
 }
 
 export default function(state = initialState, action) {
@@ -21,7 +22,9 @@ export default function(state = initialState, action) {
     case PRODUCT_SHOW_FAILED:
       return {
         ...state,
-        error: true
+        ...payload,
+        errorMsg: payload,
+        errorBool: true
       }
     default:
       return state;

@@ -2,21 +2,9 @@ import React, { Component } from 'react';
 import { withRouter, Link } from 'react-router-dom';
 import { connect } from 'react-redux';
 import { getAllProducts } from '../redux/actions/ActProducts';
+import ProductDetail from './ProductDetail';
 
 import Muter from '../assets/images/spinner-loading.gif';
-
-// const furnitureStyle = ['Contemporary', 'Modern', 'Scandinavian', 'Classic', 'Midcentury'];
-// const deliveryTime = ['OneWeek', 'TwoWeek', 'ThreeWeek', 'FourWeek'];
-// let timeDeliver = this.props.allProductsProps.delivery_time
-// if (0<timeDeliver<=7) {
-//   return timeDeliver = "oneWeek";
-// } else if (7<timeDeliver<=14) {
-//   return timeDeliver = "twoWeek";
-// } else if (14<timeDeliver<=30) {
-//   return timeDeliver = "oneMonth";
-// } else {
-//   return timeDeliver = "moreTime";
-// }
 
 class Products extends Component {
   constructor(props) {
@@ -38,8 +26,9 @@ class Products extends Component {
           moreTime: false,
         }
       },
-      furnitureStylesChoose: [],
-      deliveryTimeChoose: [],
+      loadView: 1,
+      disabledProp: false,
+      detailProduct: [],
       loading: false,
       error: false
     }
@@ -69,23 +58,7 @@ class Products extends Component {
       searchBox: e.target.value.substr(0, 15)
     })
   }
-  getDetailProduct = (e) => {
-    e.preventDefault();
-    console.log('TEST BUTTON DETAIL')
-  }
-  loading = isLoading => {
-    if(isLoading) {
-      return <div className="spinner-loading-gif"><img src={Muter} /></div>
-    }
-  }
-  error = isError => {
-    if(isError) {
-      return <div className="alert alert-danger"><span>Network Error</span></div>
-    }
-  }
-  ////////////////////////
   allFilterClickListener = async (e, filterProp) => {
-    console.log("FILTER CLICKED", e.target.dataset.name);
     const name = e.target.dataset.name;
     this.setState(prevState => ({
       passingTags: {
@@ -97,7 +70,6 @@ class Products extends Component {
       }
     }));
     await this.checkboxHandler(e);
-    console.log('PASSING TAGS', this.state.passingTags)
   }
   filteredCollected = () => {
     const collectedTrueKeys = {
@@ -108,20 +80,36 @@ class Products extends Component {
     for (let fStyle in furniture_style) {
       if (furniture_style[fStyle]) collectedTrueKeys.furniture_style.push(fStyle);
     }
+    // let abcBox = [];
+    // let defBox = [];
+    // let ghiBox = [];
+    // let jklBox = [];
+    // for (let iu=1; iu<=7; iu++) {
+    //   abcBox.push(`${iu}`);
+    // }
+    // for (let ju=8; ju<=14; ju++) {
+    //   defBox.push(`${ju}`);
+    // }
+    // for (let ku=15; ku<=30; ku++) {
+    //   ghiBox.push(`${ku}`);
+    // }
+    // for (let lu=31; lu<=100; lu++) {
+    //   jklBox.push(`${lu}`);
+    // }
     let timeee = this.state.passingTags.delivery_time;
     for (let dTime in delivery_time) {
-      if (timeee.oneWeek && delivery_time[dTime]) {
+      if ((dTime === 'oneWeek') && timeee.oneWeek) {
         collectedTrueKeys.delivery_time.push('1', '2', '3', '4', '5', '6', '7');
-      } else if (timeee.twoWeek) {
+      } else if ((dTime === 'twoWeek') && timeee.twoWeek) {
         collectedTrueKeys.delivery_time.push('8', '9', '10', '11', '12', '13', '14');
-      } else if (timeee.oneMonth) {
+      } else if ((dTime === 'oneMonth') && timeee.oneMonth) {
         collectedTrueKeys.delivery_time.push('15', '16', '17', '18', '19', '20', '21', '22', '23', '24', '25', '26', '27', '28', '29', '30');
+      } else if ((dTime === 'moreTime') && timeee.moreTime) {
+        collectedTrueKeys.delivery_time.push('31', '32', '33', '34', '35', '36', '37', '38', '39', '40', '41', '42', '43', '44', '45', '46', '47', '48', '49', '50', '51', '52', '53', '54', '55', '56', '57', '58', '59', '60')
       } else {
-        collectedTrueKeys.delivery_time.push()
+        collectedTrueKeys.delivery_time.push();
       }
-      // if (delivery_time[dTime]) collectedTrueKeys.delivery_time.push(dTime);
     }
-    console.log('furniture_style & delivery_time', collectedTrueKeys)
     return collectedTrueKeys;
   }
   multiPropsFilter = (products, filters) => {
@@ -129,7 +117,6 @@ class Products extends Component {
     const filterKeys = Object.keys(filters);
       return filterKeys.every(key => {
         if (!filters[key].length) return true;
-  
         if (Array.isArray(product[key])) {
           return product[key].some(keyElement => filters[key].includes(keyElement));
         }
@@ -143,14 +130,40 @@ class Products extends Component {
       return product.name.toLowerCase().includes(this.state.searchBox);
     });
   }
-  ///////////////////////
+  getDetailProduct = async (data) => {
+    await this.setState({
+      loadView: 2,
+      detailProduct: data,
+      disabledProp: true
+    })
+  }
+  changeView = (View) => {
+    this.setState({
+      loadView: View,
+      disabledProp: false
+    });
+  }
+  refreshPage = () => {
+    window.location.reload(true);
+  }
+  loading = isLoading => {
+    if(isLoading) {
+      return <div className="spinner-loading-gif"><img src={Muter} /></div>
+    }
+  }
+  error = isError => {
+    if(isError) {
+      return <div className="alert alert-danger">
+        <span style={{ margin: "0 10px 0 0" }}>Network Error </span><button type="button" className="btn btn-primary" onClick={this.refreshPage}><i className="fas fa-arrow-left"></i>Refresh Page</button>
+      </div>
+    }
+  }
   render() {
-    console.log(this.props);
     const showProducts = this.searchProducts().map(pr => {
       return (
         <div className="col-12 col-sm-12 col-md-12 col-lg-6" key={pr.name}>
-          <Link to="/product/:name">
-            <div className="product-box">
+          {/* <Link to="/product/:name"> */}
+            <div className="product-box" onClick={() => this.getDetailProduct(pr)}>
               <div className="prod-name">
                 <h4 className="prod-name-title">{pr.name}</h4>
                 <p className="prod-name-price">Rp. {parseInt(pr.price).toLocaleString("id-ID")}</p>
@@ -167,11 +180,10 @@ class Products extends Component {
                   </p>
               </div>
             </div>
-          </Link>
+          {/* </Link> */}
         </div>
       )
     })
-    console.log('searchProducts', this.searchProducts());
     return (
       <section className="fabelio-furniture">
       {this.error(this.state.error)}
@@ -180,7 +192,7 @@ class Products extends Component {
             <div className="row">
               <div className="col-12 col-sm-12 col-md-12 col-lg-6">
                 <div className="form-group">
-                  <input type="text" className="form-control search-box" id="searchBox" placeholder="Search Furniture" name="searchBox"  onChange={this.inputHandler} autoComplete="off" />
+                  <input type="text" className="form-control search-box" id="searchBox" placeholder="Search Furniture" name="searchBox"  onChange={this.inputHandler} autoComplete="off" disabled={this.state.disabledProp} />
                   {/* <button className="search-button"><i class="fas fa-search"></i></button> */}
                 </div>
               </div>
@@ -188,9 +200,9 @@ class Products extends Component {
             <div className="row">
               <div className="col-12 col-sm-12 col-md-12 col-lg-6">
                 <div className="dropdown dropdown-style">
-                  <a className="btn btn-light dropdown-toggle" href="#" role="button" id="dropdownFurnitureStyle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                  <button className="btn btn-light dropdown-toggle" role="button" id="dropdownFurnitureStyle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" disabled={this.state.disabledProp} >
                     Furniture Style
-                  </a>
+                  </button>
                   <div className="dropdown-menu" aria-labelledby="dropdownFurnitureStyle">
                     <div className="fstyle-box">
                       <div className="furniture-style">
@@ -219,9 +231,9 @@ class Products extends Component {
               </div>
               <div className="col-12 col-sm-12 col-md-12 col-lg-6">
                 <div className="dropdown dropdown-style">
-                  <a className="btn btn-light dropdown-toggle" href="#" role="button" id="dropdownDeliveryTime" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                  <button className="btn btn-light dropdown-toggle" role="button" id="dropdownDeliveryTime" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" disabled={this.state.disabledProp} >
                     Delivery Time
-                  </a>
+                  </button>
                   <div className="dropdown-menu" aria-labelledby="dropdownDeliveryTime">
                     <div className="dtime-box">
                       <div className="deliv-time">
@@ -247,6 +259,9 @@ class Products extends Component {
             </div>
           </div>
         </div>
+
+        {
+          parseInt(this.state.loadView) === parseInt(1) ? 
         <div className="fabelio-body">
           <div className="container">
             <div className="row">
@@ -254,7 +269,13 @@ class Products extends Component {
               {showProducts}
             </div>
           </div>
-        </div>
+        </div> : null
+        }
+
+        {
+          parseInt(this.state.loadView) === parseInt(2) ? 
+          <ProductDetail detailProduct={this.state.detailProduct} changeView={this.changeView}/> : null
+        }
       </section>
     )
   }
@@ -264,7 +285,8 @@ const mapStateToProps = state => {
   return {
     allProductsProps: state.RdcProducts.allProducts,
     allFurnitureStylesProps: state.RdcProducts.allFurnitureStyles,
-    errorProps: state.RdcProducts.error
+    errorProps: state.RdcProducts.errorBool,
+    errorText: state.RdcProducts.errorMsg
   }
 }
 
